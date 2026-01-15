@@ -1,4 +1,4 @@
-import type { Todo } from "../types/Todo";
+import type { Todo } from "../types/todo";
 import { useState } from "react";
 import { TodoContext } from "./TodoContext";
 
