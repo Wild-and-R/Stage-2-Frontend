@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import type { Todo } from "../types/Todo";
+import type { Todo } from "../types/todo";
 
 export interface TodoContextType {
     todos: Todo[];
