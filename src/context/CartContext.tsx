@@ -3,11 +3,12 @@ import type { CartItem } from "../types/cartitem";
 
 export type CartContextType = {
   cart: CartItem[];
+  loadingIds: number[];
   addToCart: (
     product: Omit<CartItem, "quantity">,
     quantity?: number
-  ) => void;
-  removeFromCart: (id: number) => void;
+  ) => Promise<void>;
+  removeFromCart: (id: number) => Promise<void>;
 };
 
 export const CartContext = createContext<CartContextType | undefined>(
@@ -21,3 +22,4 @@ export const useCart = () => {
   }
   return context;
 };
+
